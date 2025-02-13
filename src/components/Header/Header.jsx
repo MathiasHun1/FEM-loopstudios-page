@@ -1,4 +1,5 @@
 import styles from './Header.module.scss';
+import { QUERIES } from '../../constants';
 import logo from '../../assets/logo.svg';
 import hamburger from '../../assets/icon-hamburger.svg';
 
@@ -6,8 +7,8 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <picture className={styles.image_container}>
-        <source srcSet="/images/mobile/image-hero.jpg" media="(max-width: 600px)" />
-        <source srcSet="/images/desktop/image-hero.jpg" />
+        <source srcSet="/images/mobile/image-hero.jpg" media={QUERIES.mobile} />
+        <source srcSet="/images/desktop/image-hero.jpg" media={QUERIES.desktop} />
         <img className={styles.hero} src="/images/mobile/image-hero.jpg" alt="" />
       </picture>
 
