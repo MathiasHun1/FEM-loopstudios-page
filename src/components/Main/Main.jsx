@@ -1,5 +1,8 @@
 import { QUERIES } from '../../constants';
 import styles from './Main.module.scss';
+import { cards } from '../../cardsData';
+
+import Card from '../Card/Card.jsx';
 
 const Main = () => {
   return (
@@ -21,7 +24,17 @@ const Main = () => {
         </article>
       </section>
 
-      <section className={styles.card_grid}></section>
+      <section className={styles.card_section__wrapper}>
+        <div className={styles.card_section_title__wrapper}>
+          <h2>Our Creations</h2>
+          <button className={styles.button}>SEE ALL</button>
+        </div>
+        <div className={styles.cards_grid}>
+          {cards.map((card) => (
+            <Card key={card.text} text={card.text} imageSource={card.imageSource} />
+          ))}
+        </div>
+      </section>
     </main>
   );
 };

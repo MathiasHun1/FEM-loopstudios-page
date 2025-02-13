@@ -95,11 +95,11 @@
 
   h1 {
     @include font-base;
-    font-size: $fs-L-mobile;
+    font-size: $fs-XL-mobile;
     line-height: 1;
 
     @media (min-width: $breakpoint-desktop) {
-      font-size: $fs-L-desktop;
+      font-size: $fs-XL-desktop;
     }
   }
 }

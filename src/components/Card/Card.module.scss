@@ -1,0 +1,27 @@
+@use '../../styles/config' as *;
+
+.card_wrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.top_layer {
+  position: absolute;
+  content: '';
+  inset: 0;
+  background: linear-gradient(to right, hsla(0 0 0 / 0.6), hsla(0 0 0 / 0));
+}
+
+.text {
+  @include font-base;
+  color: $clr-primary-white;
+  text-transform: uppercase;
+  font-size: $fs-M-mobile;
+
+  display: inline-block;
+  max-width: 150px;
+
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}

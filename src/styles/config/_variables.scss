@@ -9,14 +9,17 @@ $fw-regular: 400;
 
 $fs-S-mobile: (15rem / 16);
 $fs-S-desktop: (15rem / 16);
-$fs-M-mobile: (32rem / 16);
-$fs-M-desktop: (48rem / 16);
-$fs-L-mobile: (40rem / 16);
-$fs-L-desktop: (72rem / 16);
+$fs-M-mobile: (24rem / 16);
+$fs-M-desktop: (32rem / 16);
+$fs-L-mobile: (32rem / 16);
+$fs-L-desktop: (48rem / 16);
+$fs-XL-mobile: (40rem / 16);
+$fs-XL-desktop: (72rem / 16);
 
 @mixin font-base {
   font-family: $ff-base;
   font-weight: $fw-light;
+  line-height: 1;
 }
 
 @mixin font-accent {

@@ -27,8 +27,6 @@
 }
 
 .image {
-  display: revert;
-  object-fit: cover;
 }
 
 .article {
@@ -40,7 +38,7 @@
   h2 {
     @include font-base;
     text-transform: uppercase;
-    font-size: $fs-M-mobile;
+    font-size: $fs-L-mobile;
     line-height: 1;
     margin-bottom: 16px;
   }
@@ -63,7 +61,80 @@
     width: 500px;
 
     h2 {
-      font-size: $fs-M-desktop;
+      font-size: $fs-L-desktop;
     }
+  }
+}
+
+.card_section_title__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+
+  @media (min-width: $breakpoint-tablet) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 80px;
+  }
+}
+
+.button {
+  height: min-content;
+  padding: 14px 40px;
+  background: $clr-primary-black;
+  border: 2px solid $clr-primary-black;
+  color: $clr-primary-white;
+  @include font-accent;
+  font-size: (14rem / 16);
+  letter-spacing: 5px;
+  display: none;
+
+  @media (min-width: $breakpoint-tablet) {
+    display: revert;
+  }
+}
+
+.button:hover {
+  cursor: pointer;
+  background: $clr-primary-white;
+  color: $clr-primary-black;
+}
+
+.card_section__wrapper {
+  padding-top: 96px;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  h2 {
+    @include font-base;
+    font-size: $fs-L-mobile;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-top: 160px;
+
+    h2 {
+      font-size: $fs-L-desktop;
+    }
+  }
+}
+
+.cards_grid {
+  display: grid;
+  gap: 24px;
+
+  @media (min-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
   }
 }
