@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+// Fonts
+$ff-base: 'Josefin Sans', sans-serif;
+$ff-accent: 'Alata', sans-serif;
+
+$fw-light: 300;
+$fw-regular: 400;
+
+$fs-S-mobile: (15rem / 16);
+$fs-S-desktop: (15rem / 16);
+$fs-M-mobile: (32rem / 16);
+$fs-M-desktop: (48rem / 16);
+$fs-L-mobile: (40rem / 16);
+$fs-L-desktop: (72rem / 16);
+
+@mixin font-base {
+  font-family: $ff-base;
+  font-weight: $fw-light;
+}
+
+@mixin font-accent {
+  font-family: $ff-accent;
+  font-weight: $fw-regular;
+}
+
+// Colors
+$clr-primary-white: hsl(0 0 100);
+$clr-primary-black: hsl(0 0 0);
+$clr-primary-dark-gray: hsl(0 0 55);
+$clr-primary-very-dark-gray: hsl(0 0 41);
+
+$clr-opaque-black: hsl(0 0 0 / 0.4);
+
+//breakpoints
+$breakpoint-tablet: 600px;
+$breakpoint-desktop: 1100px;
