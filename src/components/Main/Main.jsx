@@ -3,8 +3,11 @@ import styles from './Main.module.scss';
 import { cards } from '../../cardsData';
 
 import Card from '../Card/Card.jsx';
+import { useState } from 'react';
 
 const Main = () => {
+  const [cardId, setCardId] = useState(0);
+
   return (
     <main className={styles.main}>
       <section className={styles.article_section__wrapper}>
@@ -31,7 +34,7 @@ const Main = () => {
         </div>
         <div className={styles.cards_grid}>
           {cards.map((card) => (
-            <Card key={card.text} text={card.text} imageSource={card.imageSource} />
+            <Card key={card.text} text={card.text} imageSource={card.imageSource} id={card.id} />
           ))}
         </div>
       </section>

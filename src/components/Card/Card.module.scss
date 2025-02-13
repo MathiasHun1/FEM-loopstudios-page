@@ -3,6 +3,13 @@
 .card_wrapper {
   position: relative;
   width: fit-content;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.card_wrapper:hover {
+  cursor: pointer;
 }
 
 .top_layer {
@@ -10,6 +17,18 @@
   content: '';
   inset: 0;
   background: linear-gradient(to right, hsla(0 0 0 / 0.6), hsla(0 0 0 / 0));
+
+  @media (min-width: $breakpoint-tablet) {
+    background: linear-gradient(to top, hsla(0 0 0 / 0.6), hsla(0 0 0 / 0));
+  }
+}
+
+.top_layer:hover {
+  background: hsla(0 0 100 / 0.75);
+
+  h3 {
+    color: $clr-primary-black;
+  }
 }
 
 .text {

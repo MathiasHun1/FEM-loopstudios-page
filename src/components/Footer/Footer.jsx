@@ -18,17 +18,17 @@ const Footer = () => {
         </div>
         <div className={styles.logos_wrapper}>
           <div className={styles.social_logos}>
-            <div>
-              <img src={fbLogo} alt="" />
+            <div role="link" className={styles.social_icon}>
+              <img src={fbLogo} alt="link for facebook" />
             </div>
-            <div>
-              <img src={instaLogo} alt="" />
+            <div role="link" className={styles.social_icon}>
+              <img src={instaLogo} alt="link for instagram" />
             </div>
-            <div>
-              <img src={pinterestLogo} alt="" />
+            <div role="link" className={styles.social_icon}>
+              <img src={pinterestLogo} alt="link for pinterest" />
             </div>
-            <div>
-              <img src={twitterLogo} alt="" />
+            <div role="link" className={styles.social_icon}>
+              <img src={twitterLogo} alt="link for twitter" />
             </div>
           </div>
           <p className={styles.footer_text}>© 2021 Loopstudios. All rights reserved.</p>

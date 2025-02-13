@@ -1,9 +1,9 @@
 import { QUERIES } from '../../constants';
 import styles from './Card.module.scss';
 
-const Card = ({ imageSource, text }) => {
+const Card = ({ imageSource, text, id }) => {
   return (
-    <div className={styles.card_wrapper}>
+    <button className={styles.card_wrapper} aria-labelledby={`card${id}`}>
       <picture>
         <source srcSet={imageSource.mobile} media={QUERIES.mobile} />
         <source srcSet={imageSource.desktop} media={QUERIES.desktop} />
@@ -11,9 +11,11 @@ const Card = ({ imageSource, text }) => {
       </picture>
 
       <div className={styles.top_layer}>
-        <h3 className={styles.text}>{text}</h3>
+        <h3 id={`card${id}`} className={styles.text}>
+          {text}
+        </h3>
       </div>
-    </div>
+    </button>
   );
 };
 
