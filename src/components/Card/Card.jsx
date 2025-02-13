@@ -2,8 +2,6 @@ import { QUERIES } from '../../constants';
 import styles from './Card.module.scss';
 
 const Card = ({ imageSource, text }) => {
-  console.log('HI');
-
   return (
     <div className={styles.card_wrapper}>
       <picture>

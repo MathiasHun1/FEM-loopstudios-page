@@ -1,0 +1,43 @@
+@use '../../styles/config' as *;
+
+.navbar {
+  @include font-accent;
+  font-size: $fs-S-mobile;
+  // width: fit-content;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  display: none;
+
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: baseline;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    gap: 34px;
+  }
+}
+
+.nav_link_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .nav_link_decorator {
+    height: 2px;
+    background: $clr-primary-white;
+    transform: scaleX(0);
+    transition: transform 100ms ease-out;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .nav_link_decorator {
+      transform: scaleX(0.5);
+    }
+  }
+}

@@ -3,6 +3,9 @@ import { QUERIES } from '../../constants';
 import logo from '../../assets/logo.svg';
 import hamburger from '../../assets/icon-hamburger.svg';
 
+import Navbar from '../Navbar/Navbar';
+import Logo from '../Logo/Logo';
+
 const Header = () => {
   return (
     <header className={styles.header}>
@@ -14,36 +17,8 @@ const Header = () => {
 
       <div className={styles.header_layer}>
         <div className={styles.navbar_wrapper}>
-          <div className={styles.logo_wrapper}>
-            <img src={logo} alt="" />
-          </div>
-          <nav className={styles.navbar}>
-            <div className={styles.nav_link_wrapper}>
-              <p className={styles.nav_link}>About</p>
-              <div className={styles.nav_link_decorator}></div>
-            </div>
-
-            <div className={styles.nav_link_wrapper}>
-              <p className={styles.nav_link}>Carreers</p>
-              <div className={styles.nav_link_decorator}></div>
-            </div>
-
-            <div className={styles.nav_link_wrapper}>
-              <p className={styles.nav_link}>Events</p>
-              <div className={styles.nav_link_decorator}></div>
-            </div>
-
-            <div className={styles.nav_link_wrapper}>
-              <p className={styles.nav_link}>Products</p>
-              <div className={styles.nav_link_decorator}></div>
-            </div>
-
-            <div className={styles.nav_link_wrapper}>
-              <p className={styles.nav_link}>Support</p>
-              <div className={styles.nav_link_decorator}></div>
-            </div>
-          </nav>
-
+          <Logo />
+          <Navbar />
           <div className={styles.nav_mobile_icon}>
             <img src={hamburger} alt="" />
           </div>
